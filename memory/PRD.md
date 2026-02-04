@@ -72,7 +72,15 @@ User wants to run OpenClaw (https://github.com/openclaw/openclaw) locally on the
 - [ ] Integration with other services
 
 ## Next Tasks
-1. User runs `./start-secure.sh` to build Docker image
-2. User starts gateway with `docker compose -f docker-compose.secure.yml up -d`
-3. User connects WhatsApp by scanning QR code
-4. User approves contacts via pairing system
+1. User deploys via Emergent "Deploy" button OR downloads via "Save to Github"
+2. User runs `./start-secure.sh` to build Docker image
+3. User starts gateway with `docker compose -f docker-compose.secure.yml up -d`
+4. User connects WhatsApp by scanning QR code
+5. User approves contacts via pairing system
+
+## Control Panel
+Created `control-panel.sh` with 4 security presets:
+1. 🔒 MAXIMUM SECURITY - No browser, no exec, no file editing
+2. 🔐 BALANCED - Browser allowed, no exec/file editing  
+3. 🔓 TRUSTED - Browser + file editing, no shell commands
+4. ⚠️ FULL ACCESS - Everything enabled (use with caution)
